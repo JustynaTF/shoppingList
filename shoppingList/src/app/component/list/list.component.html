@@ -1,0 +1,20 @@
+<div class="form-wrapper">
+  <div class="form-container">
+    <h2 class="form-heading">Dodaj Liste</h2>
+    <form (ngSubmit)="addList()">
+      <input
+        type="text"
+        class="form-input"
+        placeholder="Dodaj liste"
+        name="title"
+        [(ngModel)]="title"
+      />
+      <div class="button-container">
+        <button type="submit" class="add-button">Dodaj liste</button>
+        <button type="button" class="back-button" (click)="goBack()">
+          Wróć
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

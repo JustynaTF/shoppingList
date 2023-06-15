@@ -1,0 +1,37 @@
+.navbar {
+  background-color: grey !important; // Kolor tła paska nawigacyjnego (jasno pomarańczowy)
+  color: white; // Kolor tekstu na biały
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+
+  .left-links {
+    display: flex;
+    align-items: center;
+  }
+
+  .right-links {
+    display: flex;
+    align-items: center;
+    margin-left: right; // Przesuń elementy na prawo
+
+    a {
+      margin-left: 10px; // Dodaj odstęp między linkami
+    }
+  }
+
+  .center-link {
+    margin-left: auto; // Przesuń link "Zaloguj się" na prawo
+  }
+
+  // Stylizacja linków
+  a {
+    color: white;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}

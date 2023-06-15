@@ -1,0 +1,22 @@
+<div class="form-wrapper">
+  <div class="form-container">
+    <h2 class="form-heading">Dodaj produkt</h2>
+    <form>
+      <input
+        type="text"
+        class="form-input"
+        placeholder="Dodaj liste"
+        name="title"
+        [(ngModel)]="title"
+      />
+      <div class="button-container">
+        <button type="submit" class="add-button" (click)="addTask()">
+          Dodaj produkt
+        </button>
+        <button type="button" class="back-button" (click)="goBack()">
+          Wróć
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

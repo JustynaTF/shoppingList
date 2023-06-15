@@ -1,0 +1,37 @@
+<div class="centered-content">
+  <div class="task-manager-container">
+    <div *ngIf="!serviceAuth.isLoggedIn()">
+      <p class="text">Zaloguj sie by przejść do Listy produktów</p>
+      <a class="buttonLogin" [routerLink]="['/login']">Zaloguj się</a>
+    </div>
+    <div class="sidebar" *ngIf="serviceAuth.isLoggedIn()">
+      <h1 class="titleList">TWOJE LISTY ZAKUPÓW</h1>
+      <div class="list-menu">
+        <div
+          class="list-menu-item"
+          [ngClass]="{ 'is-active': link.id === currentActiveList }"
+          *ngFor="let link of list"
+          (click)="updateCarrentListId(link.id)"
+          appDyrektywa
+        >
+          <div>{{ link.title | upperCase }}</div>
+        </div>
+      </div>
+      <button class="button is-primary-one" [routerLink]="['/list']">
+        Dodaj liste
+      </button>
+      <button class="buttonDelete" (click)="deleteList()">Usuń liste</button>
+    </div>
+    <div class="task-list-container" *ngIf="serviceAuth.isLoggedIn()">
+      <h1 class="titleMainPr">PRODUKTY</h1>
+      <div class="task" *ngFor="let link of tasks">
+        <p>{{ link.title }}</p>
+        <a class="edit-button" [routerLink]="['/edit', link.id]">Zmodyfikuj</a>
+      </div>
+
+      <a class="buttonTask" [routerLink]="['/task', currentActiveList]"
+        >Dodaj produkt</a
+      >
+    </div>
+  </div>
+</div>

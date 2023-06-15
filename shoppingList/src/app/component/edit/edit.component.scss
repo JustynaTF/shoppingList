@@ -1,0 +1,47 @@
+.form-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.form-container {
+  padding: 20px;
+  width: 300px;
+}
+
+.form-heading {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.form-input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+}
+
+.add-button,
+.back-button {
+  padding: 10px 20px;
+  margin-right: 20px;
+}
+
+.add-button {
+  background-color: #4caf50;
+  color: white;
+}
+
+.back-button {
+  background-color: #ccc;
+  color: #fff;
+}
+
+.back-button:hover {
+  background-color: #999;
+}
